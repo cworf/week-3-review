@@ -33,12 +33,22 @@
     right: 46px;
     bottom: 58%;
     color: #f54200;
+    overflow: hidden;
 }
 
 .number {
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+.bottom {
+    position: absolute;
+    bottom: -50px;
+    transition: all 3s linear;
+}
+
+.bottom.up {
+    bottom: 112%;
 }
 
 .box {

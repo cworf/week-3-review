@@ -29,8 +29,13 @@ console.log(result);
     for (i = 0; i < result.length; i++){
       (function(i){
         setTimeout(function(){
-          $('.output').text(result[i]);
-        }, 500 * i);
+          $('.output-box').append("<div class='start'>" + result[i] + "</div>");
+          $('.start').addClass("bottom").delay(10).queue(function(next){
+            $(this).addClass('up');
+            next();
+          });
+
+        }, 2000 * i);
       }(i));
     }
 
