@@ -34,10 +34,12 @@ console.log(result);
             $(this).addClass('up');
             next();
           });
-
+          $('.output-box').addClass("flash").delay(10).queue(function(next){
+            $(this).removeClass('flash');
+            next();
+          });
         }, 2000 * i);
       }(i));
     }
-
   });
 });
