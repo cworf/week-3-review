@@ -1,0 +1,52 @@
+.container-fluid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000 url(../img/the-centerjpg.jpeg) center;
+    background-size: cover;
+}
+.auth {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.cover-all {
+}
+
+.output {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.output-box {
+    position: absolute;
+    top: 12%;
+    left: 36px;
+    right: 46px;
+    bottom: 58%;
+    color: #f54200;
+}
+
+.number {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.box {
+    border-radius: 10px;
+    background: rgba(203, 26, 11, 0.88);
+    padding: 5%;
+}
+
+img.hal {
+    height: 100%;
+}

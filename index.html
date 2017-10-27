@@ -9,15 +9,29 @@
     <title>Template</title>
   </head>
   <body>
-    <div class="container">
-      <form id="counter" action="index.html" method="post">
-        <input id="user-input" type="number" placeholder="input a number">
-        <label for="user-name">Give me your name</label>
-        <input type="text" id="user-name">
-        <button type="submit" class="btn btn-primary">Count</button>
+    <div class="container-fluid">
+      <form id="counter">
+        <div class="auth box">
+          <h3>Authorized users only...</h3>
+          <label for="user-name">Give me your name</label>
+          <input type="text" id="user-name">
+        </div>
+        <div class="cover-all"></div>
+        <div class="number box">
+          <input id="user-input" type="number" placeholder="input a number">
+          <button type="submit" class="btn btn-primary">Count</button>
+        </div>
+        <div class="speech-bubble">
+          <div class="speech">
+
+          </div>
+        </div>
       </form>
       <div class="output">
+        <img class="hal" src="img/HAL9000_Case.svg" alt="">
+        <div class="output-box">
 
+        </div>
       </div>
     </div>
   </body>
