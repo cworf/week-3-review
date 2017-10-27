@@ -3,15 +3,17 @@ function count(countTo){
   for (var i = 0; i <= countTo; i++) {
     counted.push(i);
   }
-  var replace0 = counted.map(function(number){
-    if (/0/g.test(number)) {
+  var replaced = counted.map(function(number){
+    if (/1/.test(number)) {
+      return "Boop!"
+    } else if (/0/.test(number)) {
       return "Beep!";
     } else {
       return number;
     }
   });
-  replace0 = replace0.join(" ")
-  return replace0;
+  replaced = replaced.join(" ")
+  return replaced;
 }
 
 
