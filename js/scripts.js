@@ -1,10 +1,17 @@
 function count(countTo){
-  var newString = [];
+  var counted = [];
   for (var i = 0; i <= countTo; i++) {
-    newString.push(i);
+    counted.push(i);
   }
-  newString = newString.join(" ");
-  return newString;
+  var replace0 = counted.map(function(number){
+    if (/0/g.test(number)) {
+      return "Beep!";
+    } else {
+      return number;
+    }
+  });
+  replace0 = replace0.join(" ")
+  return replace0;
 }
 
 
