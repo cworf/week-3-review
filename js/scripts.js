@@ -1,11 +1,13 @@
-function count(countTo){
+function count(countTo, name){
   var counted = [];
   for (var i = 0; i <= countTo; i++) {
     counted.push(i);
   }
   var replaced = counted.map(function(number){
-    if (/1/.test(number)) {
-      return "Boop!"
+    if (number % 3 === 0) {
+      return "I'm sorry " + name + ", I'm afraid I can't do that.";
+    } else if (/1/.test(number)) {
+      return "Boop!";
     } else if (/0/.test(number)) {
       return "Beep!";
     } else {
@@ -21,7 +23,8 @@ $(function(){
   $('#counter').submit(function(event){
     event.preventDefault();
     var userInput = parseInt($('#user-input').val());
-    var result = count(userInput);
+    var userName = $('#user-name').val();
+    var result = count(userInput, userName);
 
     $('.output').text(result)
   });
