@@ -14,7 +14,7 @@ function count(countTo, name){
       return number;
     }
   });
-  replaced = replaced.join(" ")
+
   return replaced;
 }
 
@@ -25,7 +25,14 @@ $(function(){
     var userInput = parseInt($('#user-input').val());
     var userName = $('#user-name').val();
     var result = count(userInput, userName);
+console.log(result);
+    for (i = 0; i < result.length; i++){
+      (function(i){
+        setTimeout(function(){
+          $('.output').text(result[i]);
+        }, 500 * i);
+      }(i));
+    }
 
-    $('.output').text(result)
   });
 });
