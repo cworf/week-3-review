@@ -35,8 +35,8 @@ $(function(){
         var glow = "";
         var color = "";
             if (/!/.test(result[i])){
-              glow = "inset 0 0 111px rgba(245, 66, 0, 0.84)";
-              color = "#f54200";
+              glow = "inset 0 0 111px rgba(0, 198, 245, 0.83)";
+              color = "#00c6f5";
             } else if (/sorry/.test(result[i])) {
               glow = "inset 0 0 111px red";
               color = "red";
