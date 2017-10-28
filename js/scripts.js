@@ -1,5 +1,6 @@
+var counted = []
+
 function count(countTo, name){
-  var counted = [];
   for (var i = 0; i <= countTo; i++) {
     counted.push(i);
   }
@@ -26,6 +27,8 @@ $(function(){
     var userName = $('#user-name').val();
     var result = count(userInput, userName);
 
+
+
     if (userName) {
       for (i = 0; i < result.length; i++){
       (function(i){
@@ -43,6 +46,7 @@ $(function(){
             }
         setTimeout(function(){
           $('.output-box').append("<div class='start' style='color:" + color + ";'>" + result[i] + "</div>");
+          $('.speech').text("Open pod bay door " + counted[i] + ", Hal");
           $('.start').addClass("bottom").delay(10).queue(function(next){
             $(this).addClass('up');
             next();
