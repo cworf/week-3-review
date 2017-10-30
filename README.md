@@ -1,19 +1,19 @@
 
-# Week 1 Code Review
+# Week 3 Code Review
 
-# All About Mr. Worf
+# Im Sorry Dave
 
 ### Author: Colin Worf
 
 ## Description
 
-This is a single page website chronicling some details about Myself. It was a code review project for the first week of Epicodus (CSS/HTML intro).
+Week 3 review for epicodus. simple program uses for loop to count to desired number but replaces certain numbers with either Beep, Boop, or I'm sorry *name* Im afraid I cant do that. added some class changes and timing delays on each itteration of the loops so I could create a scrolling effect.
 
 ## Instructions
 
-1. Clone project ```$ git clone https://github.com/cworf/Week-1-review ```
+1. Clone project `''$ git clone https://github.com/cworf/week-3-review ```
 2. enter project by opening the repository and selecting index.html
-3. view final project online by visiting https://cworf.github.io/week-2-review/
+3. view final project online by visiting https://cworf.github.io/week-3-review/
 
 ## Specifications
 
@@ -34,7 +34,7 @@ This is a single page website chronicling some details about Myself. It was a co
 
 HTML
 CSS
-bootstrap (jQuery)
+Javascript
 
 ## Copyright
 
