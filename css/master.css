@@ -14,8 +14,6 @@
     z-index: 1;
 }
 
-.cover-all {
-}
 
 .output {
     position: absolute;
@@ -52,6 +50,7 @@
     bottom: 10px;
     left: 10px;
 }
+
 .bottom {
     position: absolute;
     top: 100%;

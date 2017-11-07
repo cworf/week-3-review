@@ -27,50 +27,49 @@ $(function(){
     var userName = $('#user-name').val();
     var result = count(userInput, userName);
 
-
-
     if (userName) {
       for (i = 0; i < result.length; i++){
       (function(i){
-        var glow = "";
-        var color = "";
-            if (/!/.test(result[i])){
-              glow = "inset 0 0 111px rgba(0, 198, 245, 0.83)";
-              color = "#00c6f5";
-            } else if (/sorry/.test(result[i])) {
-              glow = "inset 0 0 111px red";
-              color = "red";
-            } else {
-              glow = "inset 0 0 111px rgba(0, 245, 56, 0.78)";
-              color = "green";
-            }
+        if (/!/.test(result[i])){
+          var glow = "inset 0 0 111px rgba(0, 198, 245, 0.83)";
+          var color = "#00c6f5";
+        } else if (/sorry/.test(result[i])) {
+          var glow = "inset 0 0 111px red";
+          var color = "red";
+        } else {
+          var glow = "inset 0 0 111px rgba(0, 245, 56, 0.78)";
+          var color = "green";
+        }
         setTimeout(function(){
-          $('.output-box').append("<div class='start' style='color:" + color + ";'>" + result[i] + "</div>");
-          $('.speech').text("Open pod bay door " + counted[i] + ", Hal");
-          $('.start').addClass("bottom").delay(10).queue(function(next){
-            $(this).addClass('up');
-            next();
-          });
-          $('.output-box').addClass("flash").css('box-shadow', glow).delay(10).queue(function(next){
-            $(this).removeClass('flash').css("box-shadow", "");
-            next();
-          });
+          scrollOutput();
         }, 2000 * i);
       }(i));
     }
     } else {
       for (i = 0; i < 15; i++){
-      (function(i){
-        setTimeout(function(){
-          $('.output-box').append("<div class='start' style='color:red; font-size:10px'>Not authorized!!</div>");
-          $('.start').addClass("bottom").delay(10).queue(function(next){
-            $(this).addClass('up');
-            next();
-          });
-          $('.output-box').addClass("flash").css('box-shadow', 'inset 0 0 111px red')
-        }, 200 * i);
-      }(i));
-    }
+        (function(i){
+          setTimeout(function(){
+            $('.output-box').append("<div class='start' style='color:red; font-size:10px'>Not authorized!!</div>");
+            $('.start').addClass("bottom").delay(10).queue(function(next){
+              $(this).addClass('up');
+              next();
+            });
+            $('.output-box').addClass("flash").css('box-shadow', 'inset 0 0 111px red')
+          }, 200 * i);
+        }(i));
+      }
     }
   });
+  function scrollOutput() {
+    $('.output-box').append("<div class='start' style='color:" + color + ";'>" + result[i] + "</div>");
+    $('.speech').text("Open pod bay door " + counted[i] + ", Hal");
+    $('.start').addClass("bottom").delay(10).queue(function(next){
+      $(this).addClass('up');
+      next();
+    });
+    $('.output-box').addClass("flash").css('box-shadow', glow).delay(10).queue(function(next){
+      $(this).removeClass('flash').css("box-shadow", "");
+      next();
+    });
+  }
 });

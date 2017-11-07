@@ -17,18 +17,18 @@ Week 3 review for epicodus. simple program uses for loop to count to desired num
 
 ## Specifications
 
+* program counts to input replacing output numbers that contain 0s to output "Beep!"
+  * Example input: "0"
+  * Example output: ["Beep!"]
+* program counts to input replacing output numbers containing 1s to output "Boop!"
+  * Example input: "1"
+  * Example output: ["Beep!","Boop!"]
 * Program counts to the input number
-  * Example input: 5
-  * Example output: 0 1 2 3 4 5
-* program replaces input numbers containing 1s to output "Boop!"
-  * Example input: "5"
-  * Example output: "0 Boop! 2 3 4 5"
-* program replaces input numbers that contain 0s to output "Beep!"
-  * Example input: "5"
-  * Example output: "Beep! 1 2 3 4 5"
+  * Example input: "2"
+  * Example output: ["Beep!","Boop!", 2]
 * any number divisible by 3 returns "I'm sorry, Dave. I'm afraid I can't do that."
   * Example input: 6
-  * Example output: 0 1 2 I'm sorry, Dave. I'm afraid I can't do that. 4 5 I'm sorry, Dave. I'm afraid I can't do that.
+  * Example output: ["Beep!", "Boop!", 2, "I'm sorry, Dave. I'm afraid I can't do that.", 4, 5, "I'm sorry, Dave. I'm afraid I can't do that."]
 
 ## Technologies used
 
